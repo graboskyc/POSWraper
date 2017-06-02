@@ -1,6 +1,6 @@
 # POSWraper
 
-Simple UWP wrapper for the (SCBCarnivalPPPOS)[https://github.com/graboskyc/SCBCarnivalPPPOS].
+Simple UWP wrapper for the [SCBCarnivalPPPOS](https://github.com/graboskyc/SCBCarnivalPPPOS).
 
 Put the contents of that repo into WebAssets folder and edit index.html to use Full.css instead of bootstrap.min.css. Other streamlines in progress.
 
