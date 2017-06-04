@@ -22,11 +22,13 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="100"></ColumnDefinition>
-                    <ColumnDefinition Width="10"></ColumnDefinition>
+                    <ColumnDefinition Width="5"></ColumnDefinition>
                     <ColumnDefinition Width="100"></ColumnDefinition>
-                    <ColumnDefinition Width="10"></ColumnDefinition>
+                    <ColumnDefinition Width="5"></ColumnDefinition>
                     <ColumnDefinition Width="100"></ColumnDefinition>
-                    <ColumnDefinition Width="10"></ColumnDefinition>
+                    <ColumnDefinition Width="5"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition Width="5"></ColumnDefinition>
                     <ColumnDefinition Width="100"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
@@ -35,6 +37,7 @@
                 <Button x:Name="btn_reset" Content="Reset" Grid.Column="3" Click="btn_reset_Click" HorizontalAlignment="Stretch" />
                 <Button x:Name="btn_clear" Content="Clear" Grid.Column="5" Click="btn_clear_Click" HorizontalAlignment="Stretch" />
                 <Button x:Name="btn_save" Content="Save" Grid.Column="7" Click="btn_save_Click" HorizontalAlignment="Stretch" />
+                <Button x:Name="btn_editsign" Content="Edit Sign" Grid.Column="9" Click="btn_editsign_Click" HorizontalAlignment="Stretch" />
             </Grid>
         </ScrollViewer>
     </Grid>

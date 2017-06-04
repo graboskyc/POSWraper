@@ -141,8 +141,9 @@ namespace POSWrapper
             webView.HorizontalAlignment = HorizontalAlignment.Stretch;
             webView.VerticalAlignment = VerticalAlignment.Stretch;
             webView.Width = maingrid.Width;
-            webView.Refresh();
-            
+            webView.Source = new Uri("ms-appx-web:///WebAssets/index.html");
+
+
         }
 
         private async void btn_print_Click(object sender, RoutedEventArgs e)
@@ -203,6 +204,10 @@ namespace POSWrapper
         {
             IEnumerable<string> scriptArgs = new string[] { "window.saveRecpt();" };
             string x = await webView.InvokeScriptAsync("eval", scriptArgs);
+        }
+
+        private void btn_editsign_Click(object sender, RoutedEventArgs e)
+        {
         }
 
         #endregion buttons
