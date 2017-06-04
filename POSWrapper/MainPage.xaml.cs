@@ -208,6 +208,7 @@ namespace POSWrapper
 
         private void btn_editsign_Click(object sender, RoutedEventArgs e)
         {
+            webView.Source = new Uri("");
         }
 
         #endregion buttons
