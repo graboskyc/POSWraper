@@ -17,6 +17,7 @@ using Windows.UI.Xaml.Printing;
 using Windows.ApplicationModel.Core;
 using Windows.UI.Core;
 using System.Threading.Tasks;
+using Windows.UI.Popups;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -119,13 +120,51 @@ namespace POSWrapper
             await webView.InvokeScriptAsync("eval", new string[] { "$('#btn_Clear').hide();" });
             await webView.InvokeScriptAsync("eval", new string[] { "$('#btn_Save').hide();" });
             await webView.InvokeScriptAsync("eval", new string[] { "$('footer').hide();" });
+            await webView.InvokeScriptAsync("eval", new string[] { "window.confirm = function(confirmMessage) { window.external.notify('typeConfirm:' + arguments.callee.caller.name + ':' + arguments.callee.caller.arguments[0] + ':' + confirmMessage) }" });
         }
 
         private async void webView_ScriptNotify(object sender, NotifyEventArgs e)
         {
-            Windows.UI.Popups.MessageDialog dialog = new Windows.UI.Popups.MessageDialog(e.Value);
-            await dialog.ShowAsync();
+            if (!e.Value.Contains("typeConfirm"))
+            {
+                Windows.UI.Popups.MessageDialog dialog = new Windows.UI.Popups.MessageDialog(e.Value);
+                await dialog.ShowAsync();
+            }
+            else
+            {
+                Windows.UI.Popups.MessageDialog dialog = new Windows.UI.Popups.MessageDialog(e.Value.Split(':')[3]);
+                dialog.Commands.Add(new UICommand("Yes"));
+                dialog.Commands.Add(new UICommand("No"));
+                var result = await dialog.ShowAsync();
+
+                // history page
+                #region historypage
+                if(e.CallingUri.ToString().Contains("history.html"))
+                {
+                    if(e.Value.Split(':')[1].Contains("del"))
+                    {
+                        if(result.Label.Equals("Yes"))
+                        {
+                            string id = e.Value.Split(':')[2];
+                            await webView.InvokeScriptAsync("eval", new string[] { "delNoConfirm("+ id + ");" });
+                        }
+                    }
+                }
+                #endregion historypage
+
+                // admin page
+                #region adminpage
+                if (e.CallingUri.ToString().Contains("admin.html"))
+                {
+                    if (result.Label.Equals("Yes"))
+                    {
+                        await webView.InvokeScriptAsync("eval", new string[] { e.Value.Split(':')[1]+"NoConfirm();" });
+                    }
+                }
+                #endregion adminpage
+            }
         }
+
         #endregion webviewcontrol
 
 
