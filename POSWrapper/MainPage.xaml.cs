@@ -18,7 +18,8 @@ using Windows.ApplicationModel.Core;
 using Windows.UI.Core;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
-
+using Windows.UI.ViewManagement;
+using Windows.UI;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace POSWrapper
@@ -35,7 +36,15 @@ namespace POSWrapper
         public MainPage()
         {
             this.InitializeComponent();
+            var view = ApplicationView.GetForCurrentView();
 
+            view.TitleBar.BackgroundColor = Color.FromArgb(255, 174, 81, 255);
+            view.TitleBar.ButtonBackgroundColor = Color.FromArgb(255, 174, 81, 255);
+            view.TitleBar.ButtonForegroundColor = Colors.White;
+            view.TitleBar.ButtonPressedForegroundColor = Color.FromArgb(255, 174, 81, 255);
+            view.TitleBar.ButtonPressedBackgroundColor = Colors.White;
+            view.TitleBar.ButtonHoverBackgroundColor = Colors.White;
+            view.TitleBar.ButtonHoverForegroundColor = Color.FromArgb(255, 174, 81, 255);
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
