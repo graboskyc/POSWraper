@@ -20,6 +20,13 @@
         <ScrollViewer Grid.Row="1" HorizontalAlignment="Stretch" VerticalScrollBarVisibility="Disabled">
             <Grid >
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition Width="5"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition Width="5"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition Width="5"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="100"></ColumnDefinition>
                     <ColumnDefinition Width="5"></ColumnDefinition>
@@ -30,14 +37,18 @@
                     <ColumnDefinition Width="100"></ColumnDefinition>
                     <ColumnDefinition Width="5"></ColumnDefinition>
                     <ColumnDefinition Width="100"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <Button x:Name="btn_print" Click="btn_print_Click" Content="Print" Grid.Column="1" HorizontalAlignment="Stretch" />
-                <Button x:Name="btn_reset" Content="Reset" Grid.Column="3" Click="btn_reset_Click" HorizontalAlignment="Stretch" />
-                <Button x:Name="btn_clear" Content="Clear" Grid.Column="5" Click="btn_clear_Click" HorizontalAlignment="Stretch" />
-                <Button x:Name="btn_save" Content="Save" Grid.Column="7" Click="btn_save_Click" HorizontalAlignment="Stretch" />
-                <Button x:Name="btn_editsign" Content="Edit Sign" Grid.Column="9" Click="btn_editsign_Click" HorizontalAlignment="Stretch" />
+                <Button x:Name="btn_print" Click="btn_print_Click" Content="Print" Grid.Column="0" HorizontalAlignment="Stretch" />
+                <Button x:Name="btn_reset" Content="Reset" Grid.Column="2" Click="btn_reset_Click" HorizontalAlignment="Stretch" />
+                <Button x:Name="btn_save" Content="Save" Grid.Column="4" Click="btn_save_Click" HorizontalAlignment="Stretch" />
+                <Button x:Name="btn_editsign" Content="Edit Sign" Grid.Column="6" Click="btn_editsign_Click" HorizontalAlignment="Stretch" />
+
+                <Button x:Name="btn_reprint" Content="Reprint" Grid.Column="8" Click="btn_reprint_Click" HorizontalAlignment="Stretch" />
+                <Button x:Name="btn_reg" Content="Register" Grid.Column="10" Click="btn_reg_Click" HorizontalAlignment="Stretch" />
+                <Button x:Name="btn_hist" Content="History" Grid.Column="12" Click="btn_hist_Click" HorizontalAlignment="Stretch" />
+                <Button x:Name="btn_inv" Content="Inventory" Grid.Column="14" Click="btn_inv_Click" HorizontalAlignment="Stretch" />
+                <Button x:Name="btn_admin" Content="Admin" Grid.Column="16" Click="btn_admin_Click" HorizontalAlignment="Stretch" />
             </Grid>
         </ScrollViewer>
     </Grid>

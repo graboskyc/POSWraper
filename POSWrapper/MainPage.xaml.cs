@@ -118,6 +118,7 @@ namespace POSWrapper
             await webView.InvokeScriptAsync("eval", new string[] { "$('#btn_Print').hide();" });
             await webView.InvokeScriptAsync("eval", new string[] { "$('#btn_Clear').hide();" });
             await webView.InvokeScriptAsync("eval", new string[] { "$('#btn_Save').hide();" });
+            await webView.InvokeScriptAsync("eval", new string[] { "$('footer').hide();" });
         }
 
         private async void webView_ScriptNotify(object sender, NotifyEventArgs e)
@@ -142,8 +143,6 @@ namespace POSWrapper
             webView.VerticalAlignment = VerticalAlignment.Stretch;
             webView.Width = maingrid.Width;
             webView.Source = new Uri("ms-appx-web:///WebAssets/index.html");
-
-
         }
 
         private async void btn_print_Click(object sender, RoutedEventArgs e)
@@ -211,8 +210,44 @@ namespace POSWrapper
             webView.Source = new Uri("");
         }
 
+
         #endregion buttons
 
+        private void btn_reg_Click(object sender, RoutedEventArgs e)
+        {
+            webView.HorizontalAlignment = HorizontalAlignment.Stretch;
+            webView.VerticalAlignment = VerticalAlignment.Stretch;
+            webView.Width = maingrid.Width;
+            webView.Source = new Uri("ms-appx-web:///WebAssets/index.html");
+        }
 
+        private void btn_hist_Click(object sender, RoutedEventArgs e)
+        {
+            webView.HorizontalAlignment = HorizontalAlignment.Stretch;
+            webView.VerticalAlignment = VerticalAlignment.Stretch;
+            webView.Width = maingrid.Width;
+            webView.Source = new Uri("ms-appx-web:///WebAssets/history.html");
+        }
+
+        private void btn_inv_Click(object sender, RoutedEventArgs e)
+        {
+            webView.HorizontalAlignment = HorizontalAlignment.Stretch;
+            webView.VerticalAlignment = VerticalAlignment.Stretch;
+            webView.Width = maingrid.Width;
+            webView.Source = new Uri("ms-appx-web:///WebAssets/inventory.html");
+        }
+
+        private void btn_admin_Click(object sender, RoutedEventArgs e)
+        {
+            webView.HorizontalAlignment = HorizontalAlignment.Stretch;
+            webView.VerticalAlignment = VerticalAlignment.Stretch;
+            webView.Width = maingrid.Width;
+            webView.Source = new Uri("ms-appx-web:///WebAssets/admin.html");
+        }
+
+        private async void btn_reprint_Click(object sender, RoutedEventArgs e)
+        {
+            await webView.InvokeScriptAsync("eval", new string[] { "$('#myModal').modal('show');" });
+        }
     }
 }
