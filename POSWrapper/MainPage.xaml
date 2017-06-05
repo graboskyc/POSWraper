@@ -8,47 +8,47 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" x:Name="maingrid">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="45" x:Name='BrowserControlRow'></RowDefinition>
-        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="55" x:Name='BrowserControlRow'></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
 
-        <Rectangle Name="RectangleToPrint" Grid.Row="0"/>
-        <WebView x:Name="webView" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="ms-appx-web:///WebAssets/index.html" NavigationCompleted="webView_NavigationCompleted" ScriptNotify="webView_ScriptNotify"  />
+        <Rectangle Name="RectangleToPrint" Grid.Column="1"/>
+        <WebView Grid.Column="1" x:Name="webView" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="ms-appx-web:///WebAssets/index.html" NavigationCompleted="webView_NavigationCompleted" ScriptNotify="webView_ScriptNotify"  />
         
 
-        <ScrollViewer Grid.Row="1" HorizontalAlignment="Stretch" VerticalScrollBarVisibility="Disabled">
+        <ScrollViewer Grid.Row="0" HorizontalAlignment="Stretch" VerticalScrollBarVisibility="Disabled" Background="#333333;">
             <Grid >
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="100"></ColumnDefinition>
-                    <ColumnDefinition Width="5"></ColumnDefinition>
-                    <ColumnDefinition Width="100"></ColumnDefinition>
-                    <ColumnDefinition Width="5"></ColumnDefinition>
-                    <ColumnDefinition Width="100"></ColumnDefinition>
-                    <ColumnDefinition Width="5"></ColumnDefinition>
-                    <ColumnDefinition Width="100"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="100"></ColumnDefinition>
-                    <ColumnDefinition Width="5"></ColumnDefinition>
-                    <ColumnDefinition Width="100"></ColumnDefinition>
-                    <ColumnDefinition Width="5"></ColumnDefinition>
-                    <ColumnDefinition Width="100"></ColumnDefinition>
-                    <ColumnDefinition Width="5"></ColumnDefinition>
-                    <ColumnDefinition Width="100"></ColumnDefinition>
-                    <ColumnDefinition Width="5"></ColumnDefinition>
-                    <ColumnDefinition Width="100"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="55"></RowDefinition>
+                    <RowDefinition Height="5"></RowDefinition>
+                    <RowDefinition Height="55"></RowDefinition>
+                    <RowDefinition Height="5"></RowDefinition>
+                    <RowDefinition Height="55"></RowDefinition>
+                    <RowDefinition Height="5"></RowDefinition>
+                    <RowDefinition Height="55"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="55"></RowDefinition>
+                    <RowDefinition Height="5"></RowDefinition>
+                    <RowDefinition Height="55"></RowDefinition>
+                    <RowDefinition Height="5"></RowDefinition>
+                    <RowDefinition Height="55"></RowDefinition>
+                    <RowDefinition Height="5"></RowDefinition>
+                    <RowDefinition Height="55"></RowDefinition>
+                    <RowDefinition Height="5"></RowDefinition>
+                    <RowDefinition Height="55"></RowDefinition>
+                </Grid.RowDefinitions>
 
-                <Button x:Name="btn_print" Click="btn_print_Click" Content="Print" Grid.Column="0" HorizontalAlignment="Stretch" />
-                <Button x:Name="btn_reset" Content="Reset" Grid.Column="2" Click="btn_reset_Click" HorizontalAlignment="Stretch" />
-                <Button x:Name="btn_save" Content="Save" Grid.Column="4" Click="btn_save_Click" HorizontalAlignment="Stretch" />
-                <Button x:Name="btn_editsign" Content="Edit Sign" Grid.Column="6" Click="btn_editsign_Click" HorizontalAlignment="Stretch" />
+                <Button x:Name="btn_print" Click="btn_print_Click" Content="&#xE2F6;" FontFamily="Segoe MDL2 Assets" FontSize="36" Grid.Row="0" HorizontalAlignment="Stretch" RequestedTheme="Dark" />
+                <Button x:Name="btn_reset" Content="&#xE149;" FontFamily="Segoe MDL2 Assets" FontSize="36" Grid.Row="2" Click="btn_reset_Click" HorizontalAlignment="Stretch" RequestedTheme="Dark" />
+                <Button x:Name="btn_save" Content="&#xE74E;" FontFamily="Segoe MDL2 Assets" FontSize="36" Grid.Row="4" Click="btn_save_Click" HorizontalAlignment="Stretch" RequestedTheme="Dark" />
+                <Button x:Name="btn_editsign" Content="&#xE1C2;" FontFamily="Segoe MDL2 Assets" FontSize="36" Grid.Row="6" Click="btn_editsign_Click" HorizontalAlignment="Stretch" RequestedTheme="Dark" />
 
-                <Button x:Name="btn_reprint" Content="Reprint" Grid.Column="8" Click="btn_reprint_Click" HorizontalAlignment="Stretch" />
-                <Button x:Name="btn_reg" Content="Register" Grid.Column="10" Click="btn_reg_Click" HorizontalAlignment="Stretch" />
-                <Button x:Name="btn_hist" Content="History" Grid.Column="12" Click="btn_hist_Click" HorizontalAlignment="Stretch" />
-                <Button x:Name="btn_inv" Content="Inventory" Grid.Column="14" Click="btn_inv_Click" HorizontalAlignment="Stretch" />
-                <Button x:Name="btn_admin" Content="Admin" Grid.Column="16" Click="btn_admin_Click" HorizontalAlignment="Stretch" />
+                <Button x:Name="btn_reprint" Content="&#xE2F6;" FontFamily="Segoe MDL2 Assets" FontSize="36" Grid.Row="8" Click="btn_reprint_Click" HorizontalAlignment="Stretch" RequestedTheme="Dark" />
+                <Button x:Name="btn_reg" Content="&#xE1E1;" FontFamily="Segoe MDL2 Assets" FontSize="36" Grid.Row="10" Click="btn_reg_Click" HorizontalAlignment="Stretch" RequestedTheme="Dark" />
+                <Button x:Name="btn_hist" Content="&#xE823;" FontFamily="Segoe MDL2 Assets" FontSize="36" Grid.Row="12" Click="btn_hist_Click" HorizontalAlignment="Stretch" RequestedTheme="Dark" />
+                <Button x:Name="btn_inv" Content="&#xE132;" FontFamily="Segoe MDL2 Assets" FontSize="36" Grid.Row="14" Click="btn_inv_Click" HorizontalAlignment="Stretch" RequestedTheme="Dark" />
+                <Button x:Name="btn_admin" Content="&#xECA7;" FontFamily="Segoe MDL2 Assets" FontSize="36" Grid.Row="16" Click="btn_admin_Click" HorizontalAlignment="Stretch" RequestedTheme="Dark" />
             </Grid>
         </ScrollViewer>
     </Grid>

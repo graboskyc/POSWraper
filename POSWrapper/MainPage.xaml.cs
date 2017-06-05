@@ -210,6 +210,8 @@ namespace POSWrapper
             RectangleToPrint.Height = height;
             RectangleToPrint.Width = 800;
 
+            await Task.Delay(500);
+
             WebViewBrush wvBrush = new WebViewBrush();
             wvBrush.SetSource(webView);
             wvBrush.Redraw();
@@ -249,9 +251,6 @@ namespace POSWrapper
             webView.Source = new Uri("");
         }
 
-
-        #endregion buttons
-
         private void btn_reg_Click(object sender, RoutedEventArgs e)
         {
             webView.HorizontalAlignment = HorizontalAlignment.Stretch;
@@ -288,5 +287,9 @@ namespace POSWrapper
         {
             await webView.InvokeScriptAsync("eval", new string[] { "$('#myModal').modal('show');" });
         }
+
+        #endregion buttons
+
+
     }
 }
