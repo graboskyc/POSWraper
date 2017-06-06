@@ -49,16 +49,26 @@ namespace POSWrapper
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            // Register for PrintTaskRequested event
             printMan = PrintManager.GetForCurrentView();
+            printMan.PrintTaskRequested -= PrintTaskRequested;
             printMan.PrintTaskRequested += PrintTaskRequested;
-
+          
             // Build a PrintDocument and register for callbacks
             printDoc = new PrintDocument();
             printDocSource = printDoc.DocumentSource;
             printDoc.Paginate += Paginate;
             printDoc.GetPreviewPage += GetPreviewPage;
             printDoc.AddPages += AddPages;
+        }
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+                printDoc.Paginate -= Paginate;
+                printDoc.GetPreviewPage -= GetPreviewPage;
+                printDoc.AddPages -= AddPages;
+
+                // Remove the handler for printing initialization.
+                PrintManager printMan = PrintManager.GetForCurrentView();
+                printMan.PrintTaskRequested -= PrintTaskRequested;
         }
 
         #region printing
@@ -297,12 +307,17 @@ namespace POSWrapper
             await webView.InvokeScriptAsync("eval", new string[] { "$('#myModal').modal('show');" });
         }
 
-
-        #endregion buttons
-
         private void btn_hamburger_Click(object sender, RoutedEventArgs e)
         {
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
         }
+
+        private void btn_calc_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(CalcPage));
+        }
+        #endregion buttons
+
+
     }
 }

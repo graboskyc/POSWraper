@@ -32,11 +32,11 @@
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
-                    <Button x:Name="btn_reprint" Content="&#xE2F6;" FontFamily="Segoe MDL2 Assets" FontSize="28" Click="btn_reprint_Click" Width="50" Height="50" Background="Transparent"  RequestedTheme="Dark" />
+                    <Button x:Name="btn_reprint" Content="&#xE8A1;" FontFamily="Segoe MDL2 Assets" FontSize="28" Click="btn_reprint_Click" Width="50" Height="50" Background="Transparent"  RequestedTheme="Dark" />
                     <TextBlock Text="Reprint" FontSize="18" VerticalAlignment="Center" RequestedTheme="Dark" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Button x:Name="btn_reg" Content="&#xE1E1;" FontFamily="Segoe MDL2 Assets" FontSize="28" Click="btn_reg_Click" Width="50" Height="50" Background="Transparent" RequestedTheme="Dark" />
+                    <Button x:Name="btn_reg" Content="&#xE8FC;" FontFamily="Segoe MDL2 Assets" FontSize="28" Click="btn_reg_Click" Width="50" Height="50" Background="Transparent" RequestedTheme="Dark" />
                     <TextBlock Text="Register" FontSize="18" VerticalAlignment="Center" RequestedTheme="Dark" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
@@ -44,12 +44,16 @@
                     <TextBlock Text="History" FontSize="18" VerticalAlignment="Center" RequestedTheme="Dark" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Button x:Name="btn_inv" Content="&#xE132;" FontFamily="Segoe MDL2 Assets" FontSize="28"  Click="btn_inv_Click" Width="50" Height="50" Background="Transparent"  RequestedTheme="Dark" />
+                    <Button x:Name="btn_inv" Content="&#xE160;" FontFamily="Segoe MDL2 Assets" FontSize="28"  Click="btn_inv_Click" Width="50" Height="50" Background="Transparent"  RequestedTheme="Dark" />
                     <TextBlock Text="Inventory" FontSize="18" VerticalAlignment="Center" RequestedTheme="Dark" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Button x:Name="btn_admin" Content="&#xECA7;" FontFamily="Segoe MDL2 Assets" FontSize="28" Click="btn_admin_Click" Width="50" Height="50" Background="Transparent" RequestedTheme="Dark" />
                     <TextBlock Text="Admin" FontSize="18" VerticalAlignment="Center" RequestedTheme="Dark" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btn_calc" Content="&#xE8EF;" FontFamily="Segoe MDL2 Assets" FontSize="28" Click="btn_calc_Click" Width="50" Height="50" Background="Transparent" RequestedTheme="Dark" />
+                    <TextBlock Text="Calculator" FontSize="18" VerticalAlignment="Center" RequestedTheme="Dark" />
                 </StackPanel>
             </StackPanel>
         </SplitView.Pane>
