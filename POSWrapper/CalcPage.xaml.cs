@@ -4,6 +4,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.ViewManagement;
 using Windows.UI;
 using System.Text;
+using Windows.ApplicationModel.DataTransfer;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace POSWrapper
@@ -113,5 +114,11 @@ namespace POSWrapper
             txt_tape.Text = txt_tape.Text + "\n============================\n" + _total.ToString();
         }
 
+        private void btn_copy_Click(object sender, RoutedEventArgs e)
+        {
+            var dataPackage = new DataPackage();
+            dataPackage.SetText(txt_tape.Text);
+            Clipboard.SetContent(dataPackage);
+        }
     }
 }
