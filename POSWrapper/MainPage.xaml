@@ -7,49 +7,57 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" x:Name="maingrid">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="55" x:Name='BrowserControlRow'></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
+    <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="150">
+        <SplitView.Pane>
+            <StackPanel Background="#AE51FF;">
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btn_hamburger" Content="&#xE700;" FontFamily="Segoe MDL2 Assets" FontSize="28" Click="btn_hamburger_Click" Width="50" Height="50" Background="Transparent" RequestedTheme="Dark" />
+                    <TextBlock Text="Menu" FontSize="18" VerticalAlignment="Center" RequestedTheme="Dark" />
+                </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btn_print" Click="btn_print_Click" Content="&#xE2F6;" FontFamily="Segoe MDL2 Assets" FontSize="28" Width="50" Height="50" Background="Transparent"  RequestedTheme="Dark" />
+                    <TextBlock Text="Print" FontSize="18" VerticalAlignment="Center" RequestedTheme="Dark" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btn_reset" Content="&#xE149;" FontFamily="Segoe MDL2 Assets" FontSize="28" Click="btn_reset_Click" Width="50" Height="50" Background="Transparent"  RequestedTheme="Dark" />
+                    <TextBlock Text="Reset" FontSize="18" VerticalAlignment="Center" RequestedTheme="Dark" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btn_save" Content="&#xE74E;" FontFamily="Segoe MDL2 Assets" FontSize="28" Click="btn_save_Click" Width="50" Height="50" Background="Transparent"  RequestedTheme="Dark" />
+                    <TextBlock Text="Save" FontSize="18" VerticalAlignment="Center" RequestedTheme="Dark" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btn_editsign" Content="&#xE1C2;" FontFamily="Segoe MDL2 Assets" FontSize="28" Click="btn_editsign_Click" Width="50" Height="50" Background="Transparent"  RequestedTheme="Dark" />
+                    <TextBlock Text="Edit Sign" FontSize="18" VerticalAlignment="Center" RequestedTheme="Dark" />
+                </StackPanel>
 
-        <Rectangle Name="RectangleToPrint" Grid.Column="1"/>
-        <WebView Grid.Column="1" x:Name="webView" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="ms-appx-web:///WebAssets/index.html" NavigationCompleted="webView_NavigationCompleted" ScriptNotify="webView_ScriptNotify"  />
-
-
-        <ScrollViewer Grid.Row="0" HorizontalAlignment="Stretch" VerticalScrollBarVisibility="Disabled" Background="#AE51FF;">
-            <Grid >
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="55"></RowDefinition>
-                    <RowDefinition Height="5"></RowDefinition>
-                    <RowDefinition Height="55"></RowDefinition>
-                    <RowDefinition Height="5"></RowDefinition>
-                    <RowDefinition Height="55"></RowDefinition>
-                    <RowDefinition Height="5"></RowDefinition>
-                    <RowDefinition Height="55"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="55"></RowDefinition>
-                    <RowDefinition Height="5"></RowDefinition>
-                    <RowDefinition Height="55"></RowDefinition>
-                    <RowDefinition Height="5"></RowDefinition>
-                    <RowDefinition Height="55"></RowDefinition>
-                    <RowDefinition Height="5"></RowDefinition>
-                    <RowDefinition Height="55"></RowDefinition>
-                    <RowDefinition Height="5"></RowDefinition>
-                    <RowDefinition Height="55"></RowDefinition>
-                </Grid.RowDefinitions>
-
-                <Button x:Name="btn_print" Click="btn_print_Click" Content="&#xE2F6;" FontFamily="Segoe MDL2 Assets" FontSize="36" Grid.Row="0" HorizontalAlignment="Stretch" RequestedTheme="Dark" />
-                <Button x:Name="btn_reset" Content="&#xE149;" FontFamily="Segoe MDL2 Assets" FontSize="36" Grid.Row="2" Click="btn_reset_Click" HorizontalAlignment="Stretch" RequestedTheme="Dark" />
-                <Button x:Name="btn_save" Content="&#xE74E;" FontFamily="Segoe MDL2 Assets" FontSize="36" Grid.Row="4" Click="btn_save_Click" HorizontalAlignment="Stretch" RequestedTheme="Dark" />
-                <Button x:Name="btn_editsign" Content="&#xE1C2;" FontFamily="Segoe MDL2 Assets" FontSize="36" Grid.Row="6" Click="btn_editsign_Click" HorizontalAlignment="Stretch" RequestedTheme="Dark" />
-
-                <Button x:Name="btn_reprint" Content="&#xE2F6;" FontFamily="Segoe MDL2 Assets" FontSize="36" Grid.Row="8" Click="btn_reprint_Click" HorizontalAlignment="Stretch" RequestedTheme="Dark" />
-                <Button x:Name="btn_reg" Content="&#xE1E1;" FontFamily="Segoe MDL2 Assets" FontSize="36" Grid.Row="10" Click="btn_reg_Click" HorizontalAlignment="Stretch" RequestedTheme="Dark" />
-                <Button x:Name="btn_hist" Content="&#xE823;" FontFamily="Segoe MDL2 Assets" FontSize="36" Grid.Row="12" Click="btn_hist_Click" HorizontalAlignment="Stretch" RequestedTheme="Dark" />
-                <Button x:Name="btn_inv" Content="&#xE132;" FontFamily="Segoe MDL2 Assets" FontSize="36" Grid.Row="14" Click="btn_inv_Click" HorizontalAlignment="Stretch" RequestedTheme="Dark" />
-                <Button x:Name="btn_admin" Content="&#xECA7;" FontFamily="Segoe MDL2 Assets" FontSize="36" Grid.Row="16" Click="btn_admin_Click" HorizontalAlignment="Stretch" RequestedTheme="Dark" />
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btn_reprint" Content="&#xE2F6;" FontFamily="Segoe MDL2 Assets" FontSize="28" Click="btn_reprint_Click" Width="50" Height="50" Background="Transparent"  RequestedTheme="Dark" />
+                    <TextBlock Text="Reprint" FontSize="18" VerticalAlignment="Center" RequestedTheme="Dark" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btn_reg" Content="&#xE1E1;" FontFamily="Segoe MDL2 Assets" FontSize="28" Click="btn_reg_Click" Width="50" Height="50" Background="Transparent" RequestedTheme="Dark" />
+                    <TextBlock Text="Register" FontSize="18" VerticalAlignment="Center" RequestedTheme="Dark" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btn_hist" Content="&#xE823;" FontFamily="Segoe MDL2 Assets" FontSize="28" Click="btn_hist_Click" Width="50" Height="50" Background="Transparent" RequestedTheme="Dark" />
+                    <TextBlock Text="History" FontSize="18" VerticalAlignment="Center" RequestedTheme="Dark" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btn_inv" Content="&#xE132;" FontFamily="Segoe MDL2 Assets" FontSize="28"  Click="btn_inv_Click" Width="50" Height="50" Background="Transparent"  RequestedTheme="Dark" />
+                    <TextBlock Text="Inventory" FontSize="18" VerticalAlignment="Center" RequestedTheme="Dark" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btn_admin" Content="&#xECA7;" FontFamily="Segoe MDL2 Assets" FontSize="28" Click="btn_admin_Click" Width="50" Height="50" Background="Transparent" RequestedTheme="Dark" />
+                    <TextBlock Text="Admin" FontSize="18" VerticalAlignment="Center" RequestedTheme="Dark" />
+                </StackPanel>
+            </StackPanel>
+        </SplitView.Pane>
+        <SplitView.Content>
+            <Grid x:Name="maingrid">
+                 <Rectangle Name="RectangleToPrint" Grid.Column="1"/>
+                 <WebView Grid.Column="1" x:Name="webView" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="ms-appx-web:///WebAssets/index.html" NavigationCompleted="webView_NavigationCompleted" ScriptNotify="webView_ScriptNotify"  />
             </Grid>
-        </ScrollViewer>
-    </Grid>
+        </SplitView.Content>
+    </SplitView>
 </Page>

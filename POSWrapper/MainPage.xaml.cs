@@ -297,8 +297,12 @@ namespace POSWrapper
             await webView.InvokeScriptAsync("eval", new string[] { "$('#myModal').modal('show');" });
         }
 
+
         #endregion buttons
 
-
+        private void btn_hamburger_Click(object sender, RoutedEventArgs e)
+        {
+            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+        }
     }
 }
