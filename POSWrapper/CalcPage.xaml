@@ -62,8 +62,10 @@
                 <Button Click="btn_plus_Click" Content="+=" Grid.Row="3" Grid.Column="4" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="300" Width="150" FontSize="48"></Button>
 
                 <TextBox Grid.Row="1" Grid.Column="0" x:Name="txt_lcd" FontSize="65" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Consolas" Margin="0,0,33,0" Foreground="#FFAE51FF" Text="0" BorderThickness="0"></TextBox>
-                <TextBlock Grid.Row="2" Grid.Column="0" Grid.RowSpan="3" x:Name="txt_tape" HorizontalAlignment="Right" VerticalAlignment="Top" FontFamily="Consolas" FontSize="28" TextAlignment="Right"></TextBlock>
-            
+                <ScrollViewer Grid.Row="2" Grid.Column="0" Grid.RowSpan="3" HorizontalAlignment="Left" Width="480" VerticalAlignment="Stretch" FontFamily="Consolas" FontSize="28" VerticalScrollBarVisibility="Visible" VerticalScrollMode="Enabled" HorizontalScrollMode="Disabled" >
+                    <TextBlock x:Name="txt_tape" TextAlignment="Right"></TextBlock>
+                </ScrollViewer>
+                            
             </Grid>
             
         </SplitView.Content>
