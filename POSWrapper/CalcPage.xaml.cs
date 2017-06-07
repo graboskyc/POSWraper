@@ -89,12 +89,12 @@ namespace POSWrapper
                 newVal = _lastNumber;
             }
 
-            _tapeSB.Append("\n-" + newVal.PadLeft(10, ' '));
+            _tapeSB.Append("\n" + Convert.ToDouble(newVal).ToString("0.00").PadLeft(10, ' ') + " - ");
             txt_tape.Text = _tapeSB.ToString();
             _total = _total - (Convert.ToDouble(newVal));
             txt_lcd.Text = _total.ToString();
 
-            txt_tape.Text = txt_tape.Text + "\n============================\n" + _total.ToString();
+            txt_tape.Text = txt_tape.Text + "\n============================\n" + Convert.ToDouble(_total).ToString("0.00");
         }
 
         private void btn_plus_Click(object sender, RoutedEventArgs e)
@@ -106,12 +106,12 @@ namespace POSWrapper
                 newVal = _lastNumber;
             }
 
-            _tapeSB.Append("\n+" + newVal.PadLeft(10, ' '));
+            _tapeSB.Append("\n" + Convert.ToDouble(newVal).ToString("0.00").PadLeft(10, ' ') + " + ");
             txt_tape.Text = _tapeSB.ToString();
             _total = _total + (Convert.ToDouble(newVal));
             txt_lcd.Text = _total.ToString();
 
-            txt_tape.Text = txt_tape.Text + "\n============================\n" + _total.ToString();
+            txt_tape.Text = txt_tape.Text + "\n============================\n" + Convert.ToDouble(_total).ToString("0.00");
         }
 
         private void btn_copy_Click(object sender, RoutedEventArgs e)
