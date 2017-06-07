@@ -7,3 +7,5 @@ Put the contents of that repo into WebAssets folder and edit index.html to use F
 Still hacking away since the printing of UWP web views is a joke...
 
 ![](SS/ss01.jpg)
+
+![](SS/ss02.png)
