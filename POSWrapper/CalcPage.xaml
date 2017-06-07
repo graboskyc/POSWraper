@@ -30,6 +30,7 @@
             <Grid x:Name="maingrid" Background="White">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="500"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="150"></ColumnDefinition>
                     <ColumnDefinition Width="150"></ColumnDefinition>
                     <ColumnDefinition Width="150"></ColumnDefinition>
@@ -45,27 +46,27 @@
                     <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
 
-                <Button Click="btn_key_Click" Content="7" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="145" Width="145" FontSize="48"></Button>
-                <Button Click="btn_key_Click" Content="8" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="145" Width="145" FontSize="48"></Button>
-                <Button Click="btn_key_Click" Content="9" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="145" Width="145" FontSize="48"></Button>
+                <Button Click="btn_key_Click" Content="7" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="145" Width="145" FontSize="48" Foreground="#FFAE51FF" BorderBrush="#FFAE51FF" Background="#33FFFFFF"></Button>
+                <Button Click="btn_key_Click" Content="8" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="145" Width="145" FontSize="48"  Foreground="#FFAE51FF" BorderBrush="#FFAE51FF" Background="#33FFFFFF"></Button>
+                <Button Click="btn_key_Click" Content="9" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="145" Width="145" FontSize="48" Foreground="#FFAE51FF" BorderBrush="#FFAE51FF" Background="#33FFFFFF"></Button>
 
-                <Button Click="btn_key_Click" Content="4" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="145" Width="145" FontSize="48"></Button>
-                <Button Click="btn_key_Click" Content="5" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="145" Width="145" FontSize="48"></Button>
-                <Button Click="btn_key_Click" Content="6" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="145" Width="145" FontSize="48"></Button>
+                <Button Click="btn_key_Click" Content="4" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="145" Width="145" FontSize="48" Foreground="#FFAE51FF" BorderBrush="#FFAE51FF" Background="#33FFFFFF"></Button>
+                <Button Click="btn_key_Click" Content="5" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="145" Width="145" FontSize="48" Foreground="#FFAE51FF" BorderBrush="#FFAE51FF" Background="#33FFFFFF"></Button>
+                <Button Click="btn_key_Click" Content="6" Grid.Row="2" Grid.Column="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="145" Width="145" FontSize="48" Foreground="#FFAE51FF" BorderBrush="#FFAE51FF" Background="#33FFFFFF"></Button>
 
-                <Button Click="btn_key_Click" Content="1" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="145" Width="145" FontSize="48"></Button>
-                <Button Click="btn_key_Click" Content="2" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="145" Width="145" FontSize="48"></Button>
-                <Button Click="btn_key_Click" Content="3" Grid.Row="3" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="145" Width="145" FontSize="48"></Button>
+                <Button Click="btn_key_Click" Content="1" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="145" Width="145" FontSize="48" Foreground="#FFAE51FF" BorderBrush="#FFAE51FF" Background="#33FFFFFF"></Button>
+                <Button Click="btn_key_Click" Content="2" Grid.Row="3" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="145" Width="145" FontSize="48" Foreground="#FFAE51FF" BorderBrush="#FFAE51FF" Background="#33FFFFFF"></Button>
+                <Button Click="btn_key_Click" Content="3" Grid.Row="3" Grid.Column="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="145" Width="145" FontSize="48" Foreground="#FFAE51FF" BorderBrush="#FFAE51FF" Background="#33FFFFFF"></Button>
 
-                <Button Click="btn_key_Click" Content="00" Grid.Row="4" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="145" Width="145" FontSize="48"></Button>
-                <Button Click="btn_key_Click" Content="." Grid.Row="4" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="145" Width="145" FontSize="48"></Button>
-                <Button Click="btn_key_Click" Content="0" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="145" Width="145" FontSize="48"></Button>
+                <Button Click="btn_key_Click" Content="00" Grid.Row="4" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="145" Width="145" FontSize="48" Foreground="#FFAE51FF" BorderBrush="#FFAE51FF" Background="#33FFFFFF"></Button>
+                <Button Click="btn_key_Click" Content="." Grid.Row="4" Grid.Column="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="145" Width="145" FontSize="48" Foreground="#FFAE51FF" BorderBrush="#FFAE51FF" Background="#33FFFFFF"></Button>
+                <Button Click="btn_key_Click" Content="0" Grid.Row="4" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="145" Width="145" FontSize="48" Foreground="#FFAE51FF" BorderBrush="#FFAE51FF" Background="#33FFFFFF"></Button>
 
-                <Button Click="btn_clear_Click" Content="*" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Stretch" Height="145" Width="135" FontSize="48"></Button>
-                <Button Click="btn_minus_Click" Content="-=" Grid.Row="2" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Stretch" Height="145" Width="135" FontSize="48"></Button>
-                <Button Click="btn_plus_Click" Content="+=" Grid.Row="3" Grid.Column="4" Grid.RowSpan="2" HorizontalAlignment="Right" VerticalAlignment="Stretch" Height="295" Width="135" FontSize="48"></Button>
+                <Button Click="btn_clear_Click" Content="*" Grid.Row="1" Grid.Column="5" HorizontalAlignment="Right" VerticalAlignment="Stretch" Height="145" Width="135" FontSize="48" Foreground="#FFAE51FF" BorderBrush="#FFAE51FF" Background="#33FFFFFF"></Button>
+                <Button Click="btn_minus_Click" Content="-=" Grid.Row="2" Grid.Column="5" HorizontalAlignment="Right" VerticalAlignment="Stretch" Height="145" Width="135" FontSize="48" Foreground="#FFAE51FF" BorderBrush="#FFAE51FF" Background="#33FFFFFF"></Button>
+                <Button Click="btn_plus_Click" Content="+=" Grid.Row="3" Grid.Column="5" Grid.RowSpan="2" HorizontalAlignment="Right" VerticalAlignment="Stretch" Height="295" Width="135" FontSize="48" Foreground="#FFAE51FF" BorderBrush="#FFAE51FF" Background="#33FFFFFF"></Button>
 
-                <TextBox Grid.Row="1" Grid.Column="0" x:Name="txt_lcd" FontSize="65" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Consolas" Margin="0,0,33,0" Foreground="#FFAE51FF" Text="0" BorderThickness="0"></TextBox>
+                <TextBox  TextAlignment="Right"  Grid.Row="1" Grid.Column="0" x:Name="txt_lcd" FontSize="65" HorizontalAlignment="Stretch" VerticalAlignment="Center" FontFamily="Consolas" Margin="30,0,30,0" Foreground="#FFAE51FF" Text="0" BorderThickness="1" BorderBrush="#FFAE51FF"></TextBox>
                 <ScrollViewer Grid.Row="2" Grid.Column="0" Grid.RowSpan="3" HorizontalAlignment="Left" Width="480" VerticalAlignment="Stretch" FontFamily="Consolas" FontSize="28" VerticalScrollBarVisibility="Visible" VerticalScrollMode="Enabled" HorizontalScrollMode="Disabled" >
                     <TextBlock x:Name="txt_tape" TextAlignment="Right"></TextBlock>
                 </ScrollViewer>
