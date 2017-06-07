@@ -24,6 +24,12 @@
                     <Button x:Name="btn_copy" Content="&#xE8C8;" FontFamily="Segoe MDL2 Assets" FontSize="28" Click="btn_copy_Click" Width="50" Height="50" Background="Transparent" RequestedTheme="Dark" />
                     <TextBlock Text="Copy Tape" FontSize="18" VerticalAlignment="Center" RequestedTheme="Dark" />
                 </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btn_clear" Content="&#xE894;" FontFamily="Segoe MDL2 Assets" FontSize="28" Click="btn_clear_Click" Width="50" Height="50" Background="Transparent" RequestedTheme="Dark" />
+                    <TextBlock Text="Clear" FontSize="18" VerticalAlignment="Center" RequestedTheme="Dark" />
+                </StackPanel>
+                
             </StackPanel>
         </SplitView.Pane>
         <SplitView.Content>
