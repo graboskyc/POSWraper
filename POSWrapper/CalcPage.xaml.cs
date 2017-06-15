@@ -5,6 +5,7 @@ using Windows.UI.ViewManagement;
 using Windows.UI;
 using System.Text;
 using Windows.ApplicationModel.DataTransfer;
+using Windows.Storage;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace POSWrapper
@@ -18,6 +19,8 @@ namespace POSWrapper
         private string _lastNumber = "0";
         StringBuilder _tapeSB = new StringBuilder();
 
+        ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
+
         public CalcPage()
         {
             this.InitializeComponent();
@@ -30,6 +33,22 @@ namespace POSWrapper
             view.TitleBar.ButtonPressedBackgroundColor = Colors.White;
             view.TitleBar.ButtonHoverBackgroundColor = Colors.White;
             view.TitleBar.ButtonHoverForegroundColor = Color.FromArgb(255, 174, 81, 255);
+
+            if (localSettings.Values["sb"] == null) // we don't have this configured yet
+            {
+                localSettings.Values["sb"] = "";
+                localSettings.Values["tape"] = "";
+                localSettings.Values["lcd"] = "0";
+            }
+            else
+            {
+                txt_tape.Text = (string)localSettings.Values["tape"];
+                _tapeSB = new StringBuilder((string)localSettings.Values["sb"]);
+                txt_lcd.Text = (string)localSettings.Values["lcd"];
+
+                if(txt_lcd.Text == "") { txt_lcd.Text = "0"; localSettings.Values["lcd"] = "0"; }
+            }
+            
         }
 
 
@@ -72,6 +91,10 @@ namespace POSWrapper
                 _total = 0.00;
                 txt_tape.Text = "";
                 _tapeSB.Clear();
+
+                localSettings.Values["sb"] = "";
+                localSettings.Values["tape"] = "";
+                localSettings.Values["lcd"] = "0";
             }
             else
             {
@@ -95,6 +118,10 @@ namespace POSWrapper
             txt_lcd.Text = _total.ToString();
 
             txt_tape.Text = txt_tape.Text + "\n============================\n" + Convert.ToDouble(_total).ToString("0.00");
+
+            localSettings.Values["sb"] = _tapeSB.ToString();
+            localSettings.Values["tape"] = txt_tape.Text.ToString();
+            localSettings.Values["lcd"] = txt_lcd.Text.ToString();
         }
 
         private void btn_plus_Click(object sender, RoutedEventArgs e)
@@ -112,6 +139,10 @@ namespace POSWrapper
             txt_lcd.Text = _total.ToString();
 
             txt_tape.Text = txt_tape.Text + "\n============================\n" + Convert.ToDouble(_total).ToString("0.00");
+
+            localSettings.Values["sb"] = _tapeSB.ToString();
+            localSettings.Values["tape"] = txt_tape.Text.ToString();
+            localSettings.Values["lcd"] = txt_lcd.Text.ToString();
         }
 
         private void btn_copy_Click(object sender, RoutedEventArgs e)
